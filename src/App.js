@@ -1,4 +1,6 @@
 import "./App.css";
+import "./common.css";
+import "./main.css";
 import { BrowserView, MobileView } from "react-device-detect";
 
 const App = () => {
@@ -10,6 +12,4 @@ const App = () => {
   );
 };
 
-
 export default App;
-

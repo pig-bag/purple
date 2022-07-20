@@ -1,8 +1,10 @@
-import Header from "./inc/Header";
+import LeftArea from "./inc/LeftArea";
+import RightArea from "./inc/RightArea";
 const Layout = () => {
   return (
     <div className="Layout">
-      <Header />
+      <LeftArea />
+      <RightArea />
     </div>
   );
 };
