@@ -1,11 +1,20 @@
-import '../main.css';
-const RightArea = () => {
+import React, { useState} from 'react';
+import Nav from "./Nav";
+import { Link } from "react-router-dom";
+
+function RightArea() {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
+  const closeMenu = () => setClick(false);
+
+
   return (
     <div id="RightArea">
       <header id="header">
         <div class="title">
           <h1 class="logo">
-            <a href="/">
+            <a href="">
               <img src="./img/logo_w.png" alt="퍼플로고" />
               <span class="blind">퍼플</span>
             </a>
@@ -13,10 +22,7 @@ const RightArea = () => {
           <p class="title-de">당신의 모든 쿠폰이 여기에</p>
         </div>
         <div class="search-form-wrap">
-          <a
-            href="/search?searchKwd=<?php echo $searchKwd;?>"
-            class="searchint"
-          >
+          <a href="" class="searchint">
             <span></span>
           </a>
           <button type="button" class="btn-search">
@@ -26,15 +32,15 @@ const RightArea = () => {
         <div class="right-wrap clearfix util01">
           <ul>
             <li>
-              <a href="/mynoti" class="btn-ntc">
+              <a href="" class="btn-ntc">
                 <i class="icon"></i>
                 <span class="blind">알림</span>
                 <span class="num"></span>
               </a>
             </li>
             <li>
-              <button class="btn-allMenu">
-                <i class="icon xi-bars"></i>
+              <button class="btn-allMenu" onClick={handleClick}>
+                <i className="fas fa-bars" />
                 <span class="blind">전체메뉴</span>
               </button>
             </li>
@@ -42,7 +48,7 @@ const RightArea = () => {
         </div>
       </header>
       <div class="search-form-wrap">
-        <a href="/search">
+        <a href="">
           <form class="search-form" method="get">
             <input
               type="text"
@@ -137,8 +143,9 @@ const RightArea = () => {
           </section>
         </div>
       </main>
-      <div class="slider-menu allMenu">
-        <button class="btn-close">
+      {/* 전체메뉴 */}
+      <div class={click ? 'slider-menu allMenu on' : 'slider-menu allMenu'}>
+        <button class="btn-close" onClick={closeMenu}>
           <span class="blind">닫기</span>
           <i class="xi-close-thin"></i>
         </button>
@@ -153,14 +160,14 @@ const RightArea = () => {
               </p>
             </a>
             <h2 class="row01">
-              <a href="/mem/login">로그인하세요.</a>
+              <a href="">로그인하세요.</a>
             </h2>
           </div>
         </section>
         <section class="menu-wrap">
           <ul class="menu">
             <li>
-              <a href="faq">
+              <a href="">
                 <i class="icon"></i>FAQ<i class="xi-angle-right-thin"></i>
               </a>
             </li>
@@ -200,8 +207,9 @@ const RightArea = () => {
           </div>
         </section>
       </div>
+      <Nav />
     </div>
   );
-};
+}
 
 export default RightArea;

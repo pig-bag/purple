@@ -1,11 +1,16 @@
-const LeftArea = () => {
+import React from 'react';
+// import '../common.css';
+import { Link } from "react-router-dom";
+// import '../assets/css/common.css';
+
+function LeftArea() {
   return (
     <div id="LeftArea">
       <h2 class="logo">
-        <a href="/">
+      <Link to="/" className="text-link">
           <img src="img/logo_w.png" alt="퍼플로고" />
           <span class="blind">퍼플</span>
-        </a>
+          </Link>
       </h2>
       <article class="adTitle">
         <p>
@@ -20,6 +25,16 @@ const LeftArea = () => {
       <article class="pushCouponList">
         <h3>퍼플할인추천쿠폰</h3>
         <ul class="couponList">
+          <li>
+            <a href="javascript:void(0)" class="pushCoupon on">
+              [<span class="col01">광주광역시</span>]{" "}
+              <span class="col02">콩스시</span> <span class="col03">70%</span>{" "}
+              <span class="col04">
+                [디너특선] [주말사용가능] 콩스시 2만원상당 콩스시
+                2만원상당콩스시 2만원상당콩스시 2만원상당콩스시 2만원상당
+              </span>
+            </a>
+          </li>
           <li>
             <a href="javascript:void(0)" class="pushCoupon on">
               [<span class="col01">광주광역시</span>]{" "}
@@ -111,7 +126,7 @@ const LeftArea = () => {
           </p>
         </div>
         <div class="col02">
-          <a href="/" class="btn-landing">
+          <a href="" class="btn-landing">
             <span>퍼플랜딩페이지</span>
             <i class="icon"></i>
           </a>

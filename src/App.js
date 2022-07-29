@@ -1,15 +1,35 @@
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LeftArea from "./components/LeftArea";
+// css
+import "./assets/css/common.css";
 import "./App.css";
-import "./common.css";
-import "./main.css";
-import { BrowserView, MobileView } from "react-device-detect";
+// import "./assets/css/main.css";
+// import "./main.css";
+// Pages
+import Home from "./components/pages/Main";
+import MyPage from "./components/pages/main/my/MyPage";
+import Coupon from "./components/pages/main/coupon/Coupon";
+import SignUp from "./components/pages/main/mem/Login";
+import Header from "./components/Header";
+import Nav from "./components/Nav";
 
-const App = () => {
+function App(props) {
   return (
-    <div className="App">
-      <BrowserView>데스크톱브라우져!</BrowserView>
-      <MobileView>모바일 브라우져!</MobileView>
-    </div>
+    <BrowserRouter>
+      <LeftArea />
+      <div id="RightArea">
+        <Header />
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="Coupon" element={<Coupon />} />
+          <Route path="MyPage" element={<MyPage />} />
+          <Route path="sign-up" element={<SignUp />} />
+        </Routes>
+        <Nav />
+      </div>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;

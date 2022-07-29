@@ -1,0 +1,645 @@
+@charset "UTF-8";
+
+#RightArea {
+  position: relative;
+  max-width: 480px;
+  min-width: 320px;
+  height: 100%;
+  margin: 0 0 0 calc(50vw + 70px);
+  background-color: #f9f9f9;
+  min-width: 320px;
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+  overflow: hidden;
+}
+#RightArea:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(#984ff3, #6d00f6);
+}
+#RightArea .content .content-inner {
+  padding: 0;
+}
+
+button {
+  border-style: none;
+  outline: none;
+  -webkit-appearance: none;
+  border: none;
+  background-color: #fff;
+  color: #000;
+}
+
+input {
+  width: 100%;
+  border-style: none;
+  color: #000;
+  outline: none;
+  -webkit-appearance: none;
+  padding: 0 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+#header {
+  display: block;
+  position: fixed;
+  top: 0;
+  max-width: 480px;
+  width: 100%;
+  height: 180px;
+  padding: 40px 0 0 20px;
+  color: #fff;
+  z-index: 1;
+  background-color: transparent;
+}
+#header .title {
+  position: relative;
+  margin-bottom: 25px;
+}
+#header .title .logo img {
+  width: 120px;
+  height: 30px;
+}
+#header .title .title-de {
+  position: absolute;
+  left: 130px;
+  bottom: 0;
+}
+#header .search-form-wrap {
+  position: relative;
+}
+#header .search-form-wrap .searchint {
+  display: block;
+  padding: 0 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  transition: all 1s;
+  cursor: pointer;
+  width: calc(100% - 20px);
+  height: 55px;
+  line-height: 55px;
+  border-radius: 5px;
+  background: #fff;
+  padding: 0 50px 0 20px;
+}
+#header .search-form-wrap .btn-search {
+  position: absolute;
+  right: 50px;
+  top: 17px;
+  width: 20px;
+  height: 20px;
+  background: url(../../assets/icon/search.png) center center no-repeat;
+  background-size: 100%;
+}
+#header .util01 {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+#header .util01 ul {
+  display: flex;
+}
+#header .util01 .btn-allMenu {
+  font-size: 25px;
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background: transparent;
+  color: #fff;
+}
+#header .util01 .btn-ntc {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background: transparent;
+  color: #fff;
+}
+#header .util01 .btn-ntc .icon {
+  display: inline-block;
+  width: 25px;
+  height: 38px;
+  background: url(../../assets/icon/bell.png) center center no-repeat;
+  background-size: 100%;
+}
+#header .util01 .btn-ntc .num {
+  position: absolute;
+  right: 4px;
+  top: -2px;
+  min-width: 20px;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 3px;
+  text-align: center;
+  border-radius: 15px;
+  background: #ff0048;
+  color: #fff;
+  font-size: 12px;
+  z-index: 1;
+}
+
+.allMenu {
+  position: absolute;
+  top: 0;
+  max-width: 480px;
+  min-width: 320px;
+  height: calc(100% - 80px);
+  background: #fff;
+  z-index: 999999;
+  border-radius: 60px 0 0 0;
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+  padding: 20px;
+  transform: translateX(calc(100% + 10px));
+  transition: all 0.5s;
+}
+.allMenu.on {
+  transform: translateX(0);
+  transition: all 0.5s;
+}
+.allMenu .btn-close {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: 40px;
+  color: #984ff3;
+  font-size: 30px;
+  background: transparent;
+}
+.allMenu .top-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px 100px;
+}
+.allMenu .top-wrap .img-wrap {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  overflow: hidden;
+  margin-right: 1.875rem;
+  border: 1px solid #ccc;
+}
+.allMenu .top-wrap .img-wrap img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.allMenu .top-wrap .text-wrap {
+  text-align: right;
+}
+.allMenu .top-wrap .text-wrap h2 {
+  font-size: 2rem;
+}
+.allMenu .top-wrap .text-wrap .btn-myset {
+  display: block;
+  position: relative;
+  color: #fff;
+  font-size: 1.25rem;
+  padding-right: 25px;
+}
+.allMenu .top-wrap .text-wrap .btn-myset:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 10px;
+  height: 20px;
+  background: url(../../assets/icon/guide_next.png) center center no-repeat;
+  background-size: 100%;
+}
+.allMenu .top-wrap .text-wrap .nicname {
+  font-size: 1.25rem;
+}
+.allMenu .menu li a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 18px;
+  padding: 0 20px;
+  padding-left: 50px;
+}
+.allMenu .menu li a i {
+  position: absolute;
+  right: 20px;
+  top: 21px;
+}
+.allMenu .menu li a .icon {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 20px;
+  top: 19px;
+  width: 20px;
+  height: 24px;
+  background: url(../../assets/icon/menu_icon01.png) center center no-repeat;
+  background-size: 100%;
+}
+.allMenu .menu li .depth02 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+}
+.allMenu .menu li .depth02 li {
+  width: 50%;
+}
+.allMenu .menu li .depth02 li a {
+  font-size: 16px;
+  color: #777;
+  height: 40px;
+  line-height: 40px;
+}
+.allMenu .menu li:nth-child(2) a .icon {
+  left: 18px;
+  top: 16px;
+  width: 25px;
+  height: 24px;
+  background: url(../../assets/icon/menu_icon02.png) center center no-repeat;
+  background-size: 100%;
+}
+.allMenu .menu li:nth-child(3) a .icon {
+  left: 21px;
+  top: 15px;
+  width: 18px;
+  height: 24px;
+  background: url(../../assets/icon/menu_icon03.png) center center no-repeat;
+  background-size: 100%;
+}
+.allMenu .main-footer {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 100px;
+}
+.allMenu .main-footer .tel span {
+  color: #6d00f6;
+}
+.allMenu .main-footer .btn-info {
+  font-size: 14px;
+  color: #777;
+}
+
+#main {
+  padding-top: 60px;
+  height: calc(100% - 48px) !important;
+  background-color: transparent !important;
+}
+#main .content-inner {
+  height: 100%;
+}
+#main .content-inner .con-list {
+  height: 100%;
+  padding: 0 5px 30px 10px;
+  overflow-y: scroll;
+}
+#main .content-inner .con-list::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 5px;
+}
+#main .content-inner .con-list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+#main .content-inner .con-list::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(130, 96, 254, 0.5803921569);
+}
+#main .content-inner .con-list::-webkit-scrollbar-thumb:hover {
+  background: #220ba6;
+}
+#main .content-inner .con-list::-webkit-scrollbar-thumb:active {
+  background: #220ba6;
+}
+
+.con-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.con-list .con-row {
+  width: calc(50% - 5px);
+  margin-right: 10px;
+}
+.con-list .con-row:nth-child(2n) {
+  margin-right: 0;
+}
+
+.coupon {
+  display: block;
+  position: relative;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  margin-bottom: 10px;
+  transition: all 1s;
+  height: 290px;
+}
+.coupon:hover .img-wrap img {
+  transform: scale(1.1) translateX(-50%);
+  transition: all 0.3s ease-out;
+  transition: 250ms;
+}
+.coupon:before {
+  content: "쿠폰받기";
+  display: block;
+  position: absolute;
+  left: 60px;
+  bottom: 13px;
+  color: #ff0048;
+  font-weight: 500;
+  z-index: 1;
+}
+.coupon .img-wrap {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 60%;
+  margin-right: 1.5rem;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+.coupon .img-wrap img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.coupon .text-wrap {
+  width: 100%;
+}
+.coupon .text-wrap .row01 {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.coupon .text-wrap .row02 {
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.coupon .text-wrap .row03 {
+  position: absolute;
+  bottom: 10px;
+  color: #ff0c4f;
+  font-size: 14px;
+}
+.coupon .text-wrap .row03 .num {
+  font-size: 25px;
+  font-weight: 900;
+}
+.coupon .coupon-down {
+  position: absolute;
+  left: 90%;
+  top: 65%;
+  width: 100%;
+  height: 100%;
+  border: 1px dotted #a45cff;
+  transform: rotate(-45deg);
+  background: #f9f5ff;
+}
+.coupon .coupon-down:before {
+  display: inline-block;
+  display: none;
+  content: "";
+  position: absolute;
+  left: 27%;
+  top: -9px;
+  width: 17px;
+  height: 17px;
+  background: url(../../assets/icon/scissors_p.png) center center no-repeat;
+  background-size: 100%;
+  transform: rotate(45deg);
+}
+.coupon .coupon-down:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 31%;
+  top: 4px;
+  width: 23px;
+  height: 30px;
+  background: url(../../assets/icon/payments_p.png) center center no-repeat;
+  background-size: 100%;
+  transform: rotate(45deg);
+}
+
+.coupon.down:before {
+  content: "다운완료";
+}
+.coupon.down .coupon-down {
+  border: 1px dotted #ccc;
+  background: #f9f9f9;
+}
+.coupon.down .coupon-down:before {
+  background: url(../../assets/icon/scissors_g.png) center center no-repeat;
+  background-size: 100%;
+  transform: rotate(45deg);
+}
+.coupon.down .coupon-down:after {
+  left: 31%;
+  top: 7px;
+  width: 23px;
+  height: 30px;
+  background: url(../../assets/icon/payments_g.png) center center no-repeat;
+  background-size: 100%;
+}
+
+.coupon.use:before {
+  content: "사용완료";
+  color: #000;
+}
+.coupon.use:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.8;
+}
+
+.nav-menu {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  max-width: 480px;
+  width: 100%;
+  height: 80px;
+  background-color: #000;
+  padding: 0 10px;
+}
+.nav-menu li {
+  width: 25%;
+}
+.nav-menu li .text-link {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+.nav-menu li .text-link img {
+  width: 33px;
+  height: 33px;
+}
+
+@media screen and (max-width: 1023px) {
+  #warp-bg {
+    display: none;
+  }
+
+  #LeftArea {
+    display: none;
+  }
+
+  #RightArea {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 737px) {
+  .con-list {
+    display: block;
+  }
+  .con-list .con-row {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .coupon {
+    display: block;
+    position: relative;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #eee;
+    overflow: hidden;
+    margin-bottom: 30px;
+    height: auto;
+  }
+  .coupon:before {
+    content: "쿠폰받기";
+    display: block;
+    position: absolute;
+    left: 75px;
+    bottom: 25px;
+    color: #ff0048;
+    font-weight: 500;
+    z-index: 1;
+  }
+  .coupon .img-wrap {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 60%;
+    margin-right: 1.5rem;
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+  .coupon .img-wrap img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .coupon .text-wrap {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .coupon .text-wrap .row01 {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .coupon .text-wrap .row02 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .coupon .text-wrap .row03 {
+    position: absolute;
+    bottom: 20px;
+    color: #ff0c4f;
+    font-size: 14px;
+  }
+  .coupon .text-wrap .row03 .num {
+    font-size: 25px;
+    font-weight: 900;
+  }
+  .coupon .coupon-down {
+    position: absolute;
+    left: 85%;
+    top: 65%;
+    width: 100%;
+    height: 100%;
+    border: 1px dotted #a45cff;
+    transform: rotate(-45deg);
+    background: #f9f5ff;
+  }
+  .coupon .coupon-down:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 27%;
+    top: -9px;
+    width: 17px;
+    height: 17px;
+    background: url(../../assets/icon/scissors_p.png) center center no-repeat;
+    background-size: 100%;
+    transform: rotate(45deg);
+  }
+  .coupon .coupon-down:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 32%;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    background: url(../../assets/icon/payments_p.png) center center no-repeat;
+    background-size: 100%;
+    transform: rotate(45deg);
+  }
+}

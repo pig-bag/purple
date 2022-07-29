@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "reset.css";
+
 .disNone {
   display: none;
 }
@@ -41,7 +42,7 @@ html {
   position: fixed;
   left: 0;
   top: 0;
-  background: #8260fe url("../public/img/background.jpg") center center no-repeat;
+  background: #8260fe url("../../assets/img/background.jpg") center center no-repeat;
   width: 1920px;
   height: 1080px;
   z-index: -1;
@@ -52,7 +53,7 @@ html {
   position: absolute;
   left: 0;
   top: 0;
-  background: url("../public/img/bg_02.png") center center no-repeat;
+  background: url("../../assets/img/bg_02.png") center center no-repeat;
   width: 1247px;
   height: 684px;
 }
@@ -161,6 +162,7 @@ html {
 }
 #LeftArea .pushCouponList {
   margin-bottom: 2vh;
+  height: 280px;
 }
 #LeftArea .pushCouponList h3 {
   position: relative;
@@ -267,7 +269,7 @@ html {
   position: absolute;
   right: 25px;
   top: 15px;
-  background: url("../public/icon/landing_arrow.png") center center no-repeat;
+  background: url("../../assets/icon/landing_arrow.png") center center no-repeat;
   width: 23px;
   height: 18px;
 }
@@ -306,7 +308,7 @@ html {
 }
 .sub-header .btn-back .icon {
   display: block;
-  background: url("../public/icon/header_arrow.png") center center no-repeat;
+  background: url("../../assets/icon/header_arrow.png") center center no-repeat;
   width: 12px;
   height: 22px;
   background-size: 100%;
@@ -330,7 +332,7 @@ html {
   top: 12px;
   width: 20px;
   height: 20px;
-  background: url("../public/icon/search.png") center center no-repeat;
+  background: url("../../assets/icon/search.png") center center no-repeat;
   background-size: 100%;
 }
 .sub-header .search-form-wrap .search-result {
@@ -381,7 +383,7 @@ html {
   top: 10px;
   width: 15px;
   height: 20px;
-  /* background: url(../public/icon/maker.png) center center no-repeat; */
+  /* background: url(../../assets/icon/maker.png) center center no-repeat; */
   background-size: 100%;
 }
 .sub-header .util01 {
@@ -565,7 +567,7 @@ html {
   top: 5px;
   width: 10px;
   height: 20px;
-  background: url("../public/icon/guide_next.png") center center no-repeat;
+  background: url("../../assets/icon/guide_next.png") center center no-repeat;
   background-size: 100%;
 }
 #my .top-wrap .text-wrap .nicname {
@@ -597,7 +599,7 @@ html {
   right: 30px;
   top: 50%;
   transform: translateY(-50%);
-  background: url("../public/icon/menu_arrow.png") center center no-repeat;
+  background: url("../../assets/icon/menu_arrow.png") center center no-repeat;
   width: 10px;
   height: 36px;
   background-size: 100%;
@@ -690,7 +692,7 @@ html {
   width: 10px;
   height: 15px;
   margin-right: 10px;
-  background: url("../public/icon/menu_arrow.png") center center no-repeat;
+  background: url("../../assets/icon/menu_arrow.png") center center no-repeat;
   background-size: 100%;
 }
 .list01 li a .text-con {
@@ -788,7 +790,7 @@ html {
   width: 23px;
   height: 18px;
   margin-right: 10px;
-  background: url("../public/icon/ring.png") center center no-repeat;
+  background: url("../../assets/icon/ring.png") center center no-repeat;
   background-size: 100%;
 }
 #mynoti .content-inner .mynotiList li a .text-con {
@@ -926,7 +928,7 @@ html {
   line-height: 50px;
   padding: 0 130px 0 20px;
   color: #ff0048;
-  /* background: #fff url(../public/icon/) right 15px center no-repeat; */
+  /* background: #fff url(../../assets/icon/) right 15px center no-repeat; */
   border-radius: 5px;
   border: 1px solid #ff0048;
   outline-style: none;
@@ -1744,7 +1746,7 @@ input[type=submit]:hover {
   top: -9px;
   width: 17px;
   height: 17px;
-  background: url(../public/icon/scissors_p.png) center center no-repeat;
+  background: url(../../assets/icon/scissors_p.png) center center no-repeat;
   background-size: 100%;
   transform: rotate(45deg);
 }
@@ -1756,7 +1758,7 @@ input[type=submit]:hover {
   top: 4px;
   width: 23px;
   height: 30px;
-  background: url(../public/icon/payments_p.png) center center no-repeat;
+  background: url(../../assets/icon/payments_p.png) center center no-repeat;
   background-size: 100%;
   transform: rotate(45deg);
 }
@@ -1769,7 +1771,7 @@ input[type=submit]:hover {
   background: #f9f9f9;
 }
 .coupon.down .coupon-down:before {
-  background: url(../public/icon/scissors_g.png) center center no-repeat;
+  background: url(../../assets/icon/scissors_g.png) center center no-repeat;
   background-size: 100%;
   transform: rotate(45deg);
 }
@@ -1778,7 +1780,7 @@ input[type=submit]:hover {
   top: 7px;
   width: 23px;
   height: 30px;
-  background: url(../public/icon/payments_g.png) center center no-repeat;
+  background: url(../../assets/icon/payments_g.png) center center no-repeat;
   background-size: 100%;
 }
 
@@ -1831,7 +1833,7 @@ input[type=submit]:hover {
   transform: translateX(-50%);
   width: 29px;
   height: 15px;
-  background: url(../public/icon/coupon_tab01.png) center top 0 no-repeat;
+  background: url(../../assets/icon/coupon_tab01.png) center top 0 no-repeat;
   background-size: 100%;
   background-position-y: 0;
 }
@@ -1840,7 +1842,7 @@ input[type=submit]:hover {
 }
 #myCoupon .tab-menu li.tab02:before {
   width: 30px;
-  background: url(../public/icon/coupon_tab02.png) center top 0 no-repeat;
+  background: url(../../assets/icon/coupon_tab02.png) center top 0 no-repeat;
   background-size: 100%;
   background-position-y: -15px;
 }
@@ -2138,7 +2140,7 @@ input[type=submit]:hover {
   top: 0;
   width: 35px;
   height: 100%;
-  background: #000 url(../public/icon/map.png) center center no-repeat;
+  background: #000 url(../../assets/icon/map.png) center center no-repeat;
   background-size: 32%;
 }
 #couponView .row04 .company-location {
